@@ -1,6 +1,6 @@
 {
-  "name": "zk-age-proof",
-  "version": "0.0.1",
+  "name": "@authenticid-labs/zk-age-proof",
+  "version": "0.0.11",
   "description": "zero knowledge age proofing on chain with realid.eth",
   "main": "index.js",
   "scripts": {
