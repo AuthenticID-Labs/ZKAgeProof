@@ -1,6 +1,6 @@
 {
   "name": "@authenticid-labs/zk-age-proof",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "zero knowledge age proofing on chain with realid.eth",
   "main": "lib/index.js",
   "types": "/lib/index.d.ts",
@@ -8,18 +8,23 @@
     "lib/**/*"
   ],
   "scripts": {
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json"
   },
   "author": "shawnmitchell.eth",
-  "keywords": ["realid", "ens", "zkp", "authenticid labs"],
+  "keywords": [
+    "realid",
+    "ens",
+    "zkp",
+    "authenticid labs"
+  ],
   "license": "ISC",
   "dependencies": {
     "ethers": "^5.5.3",
