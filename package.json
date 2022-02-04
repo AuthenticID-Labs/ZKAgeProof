@@ -3,7 +3,7 @@
   "version": "0.0.13",
   "description": "zero knowledge age proofing on chain with realid.eth",
   "main": "lib/index.js",
-  "types": "/lib/index.d.ts",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
