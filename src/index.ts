@@ -51,7 +51,7 @@ export const doZKProof = (age: number, hash: string, proof: string): boolean => 
 export const getZKHash = (age: number, timestamp: Date, dob: Date, secretPhrase: string): string => {
   const ageAtEnrollment = Math.floor((timestamp.getTime() - dob.getTime()) / 1000 / 3600 / 24 / 365.25);
   const iterations = ageAtEnrollment + 1 - age;
-  if (iterations <= 0) return secretPhrase;
+  if (iterations <= 0) return ethers.utils.keccak256(utf8Encode.encode(secretPhrase));
 
   for (let i = 0; i < iterations; i++) {
     secretPhrase = ethers.utils.keccak256(utf8Encode.encode(secretPhrase));

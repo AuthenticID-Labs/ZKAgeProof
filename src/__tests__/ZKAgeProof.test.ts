@@ -7,8 +7,13 @@ test('Do ZK Proof', () => {
   expect(doZKProof(54, secretPhrase, zk)).toBe(true);
 });
 
+test('Do ZK Proof Plus One', () => {
+  expect(doZKProof(55, secretPhrase, zk)).toBe(false);
+});
+
 test('Do Partial Proof', () => {
-  const hash = getZKHash(21, new Date(), new Date('18/Mar/1968'), secretPhrase);
+  const hash = getZKHash(21, new Date('13/Mar/2022'), new Date('18/Mar/1968'), secretPhrase);
+  console.log('hash: ', hash)
   expect(doZKProof(21, hash, zk)).toBe(true);
 });
 
